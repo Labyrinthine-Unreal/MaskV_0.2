@@ -22,11 +22,6 @@
 # CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-
-# See the README or https://gitlab.com/jcroisant/batch_export_gltf
-# for usage instructions.
-
-
 import bpy
 import os
 from mathutils import Vector, Quaternion
