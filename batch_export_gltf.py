@@ -167,7 +167,7 @@ class BatchGltfExport(bpy.types.Operator):
                 'will_save_settings': False,
             }
         }
-        bpy.ops.export_scene.gltf(**settings)
+        bpy.ops.export_scene.gltf(**settings,export_draco_mesh_compression_enable=True,export_draco_mesh_compression_level=3)
 
 
 def menu_func(self, context):
