@@ -1,6 +1,6 @@
 
 # Batch glTF 2.0 Exporter for Blender
-# Copyright © 2020 John Croisant
+# Copyright © 2022 ZOMBIE
 #
 # Permission is hereby granted, free of charge, to any person
 # obtaining a copy of this software and associated documentation files
