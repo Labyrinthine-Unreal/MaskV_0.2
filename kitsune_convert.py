@@ -131,7 +131,7 @@ for i in data:
     
     token["attributes"].append(getAttribute("LIGHTS                                                          Name",i["LIGHTS                                                          Name"])),
 
-    token["attributes"].append(getAttribute("LIGHTS                                                          Material",i["LIGHTS                                                          Material"])),
+#     token["attributes"].append(getAttribute("LIGHTS                                                          Material",i["LIGHTS                                                          Material"])),
     # token["attributes"].append(getAttribute("",i[""])),
     # token["attributes"].append(getAttribute("",i[""])),
 
