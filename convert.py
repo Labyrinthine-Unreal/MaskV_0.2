@@ -1,6 +1,7 @@
 import pandas as pd 
 import json
 data = pd.read_csv('mask_generations/Hartebeest.csv') 
+
 # data.head()
 
 # data = data.drop(['Unnamed: 0'], axis=1) 
@@ -102,8 +103,8 @@ PROJECT_NAME = 'Mask'
 f = open('v1.2.json') 
 data = json.load(f) 
 
-IMAGES_BASE_URI = 'ipfs://'
-PROJECT_NAME = 'Mask' 
+IMAGES_BASE_URI = 'ipfs://QmSBqAra39bNVthiLiP6pjanLixTCEFns4B4cjf7mCNhYk/'
+PROJECT_NAME = 'Initiate Mask ' 
 
 def getAttribute(key,value):
     return{
@@ -116,12 +117,18 @@ for i in data:
     token = {
         "image":IMAGES_BASE_URI +str(token_id) + '.glb',
         "tokenId":token_id,
-        "name": PROJECT_NAME + ' #'+ str(token_id),
+        "name": PROJECT_NAME +'#'+str(token_id),
         "attributes": []
     }
 
-    token["attributes"].append(getAttribute("IMMORTALITY Name",i["IMMORTALITY Name"])),
-    token["attributes"].append(getAttribute("MASK Material",i["MASK Material"])),
+
+    token["attributes"].append(getAttribute("HORNS                                                      Material",i["HORNS                                                      Material"])),
+    token["attributes"].append(getAttribute("MASK                                                           Material",i["MASK                                                           Material"])),
+    token["attributes"].append(getAttribute("IMMORTALITY                                                    Name",i["IMMORTALITY                                                    Name"])),
+    token["attributes"].append(getAttribute("LABYRINTH                                                      Name",i["LABYRINTH                                                      Name"])),
+    token["attributes"].append(getAttribute("LIGHTS                                                         Name",i["LIGHTS                                                         Name"])),
+    # token["attributes"].append(getAttribute("",i[""])),
+    # token["attributes"].append(getAttribute("",i[""])),
 
 
 
