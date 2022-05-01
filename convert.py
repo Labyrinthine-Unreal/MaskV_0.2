@@ -1,6 +1,6 @@
 import pandas as pd 
 import json
-data = pd.read_csv('./mask_generations/Hartebeest.csv') 
+data = pd.read_csv('mask_generations/Hartebeest.csv') 
 # data.head()
 
 # data = data.drop(['Unnamed: 0'], axis=1) 
@@ -125,7 +125,7 @@ for i in data:
 
 
 
-    with open('./Masks/mask_json/' + str(token_id), 'w') as outfile:
+    with open('Masks/mask_json/' + str(token_id), 'w') as outfile:
         json.dump(token,outfile,indent=4) 
 f.close()
 
