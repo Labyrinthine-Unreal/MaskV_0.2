@@ -103,7 +103,7 @@ PROJECT_NAME = 'Mask'
 f = open('v1.2.json') 
 data = json.load(f) 
 
-IMAGES_BASE_URI = 'ipfs://QmSBqAra39bNVthiLiP6pjanLixTCEFns4B4cjf7mCNhYk/'
+IMAGES_BASE_URI = 'ipfs://'
 PROJECT_NAME = 'Initiate Mask ' 
 
 def getAttribute(key,value):
