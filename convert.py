@@ -107,12 +107,12 @@ PROJECT_NAME = 'Mask'
 
 def getAttribute(key,value):
     return{
-        "trait_type":key,
-        "value":value
+        "trait_type":key[:17],
+        "value":value[:15]
     } 
 
 for i in data:
-    token_id =i['Unnamed: 0']
+    token_id =i['Unnamed: 0'][5:]
     token = {
         "image":IMAGES_BASE_URI +str(token_id) + '.glb',
         "tokenId":token_id,
