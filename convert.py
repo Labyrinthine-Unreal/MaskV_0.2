@@ -125,7 +125,7 @@ for i in data:
 
 
 
-    with open('Masks/mask_json/' + str(token_id), 'w') as outfile:
+    with open('mask_json/' + str(token_id), 'w') as outfile:
         json.dump(token,outfile,indent=4) 
 f.close()
 
