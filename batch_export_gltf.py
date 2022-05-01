@@ -1,6 +1,6 @@
 
 # Batch glTF 2.0 Exporter for Blender
-# Copyright © 2022 ZOMBIE
+# Copyright © 2020 John Croisant
 #
 # Permission is hereby granted, free of charge, to any person
 # obtaining a copy of this software and associated documentation files
@@ -21,6 +21,11 @@
 # ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 # CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
+
+
+# See the README or https://gitlab.com/jcroisant/batch_export_gltf
+# for usage instructions.
+
 
 import bpy
 import os
@@ -160,6 +165,7 @@ class BatchGltfExport(bpy.types.Operator):
                 'use_selection': True,
                 'check_existing': False,
                 'will_save_settings': False,
+                'export_lights':True
             }
         }
         bpy.ops.export_scene.gltf(**settings,export_draco_mesh_compression_enable=True,export_draco_mesh_compression_level=3)
