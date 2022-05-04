@@ -109,7 +109,7 @@ PROJECT_NAME = 'Initiate Hartebeast Top Feathers Mask '
 def getAttribute(key,value):
     return{
         "trait_type":key[:17],
-        "value":value[:15]
+        "value":value[:16]
     } 
 
 for i in data:
