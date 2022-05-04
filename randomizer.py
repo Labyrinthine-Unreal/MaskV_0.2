@@ -413,11 +413,11 @@ def buildChars(name, generations, genCodesList):
         while fCount < len(hostSubs):
             
             """Each Column"""
-            firstRow.append(hostSubs[fCount] + " Name")
-            firstRow.append(hostSubs[fCount] + " Material")
-            firstRow.append(hostSubs[fCount] + " Tickets")
-            firstRow.append(hostSubs[fCount] + ": Total Tickets")
-            firstRow.append(hostSubs[fCount] + " Odds (% chance)")
+            firstRow.append(hostSubs[fCount] + "                     Name")
+            firstRow.append(hostSubs[fCount] + "                     Material")
+            firstRow.append(hostSubs[fCount] + "                     Tickets")
+            firstRow.append(hostSubs[fCount] + "                     :Total Tickets")
+            firstRow.append(hostSubs[fCount] + "                     Odds (% chance)")
             
             fCount += 1
         
