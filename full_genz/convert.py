@@ -122,13 +122,13 @@ for i in data:
     }
 
 
-    token["attributes"].append(getAttribute("HORNS                     Material",i["HORNS                     Material"])),
-    token["attributes"].append(getAttribute("MASK                     Material",i["MASK                     Material"])),
-    token["attributes"].append(getAttribute("IMMORTALITY                     Name",i["IMMORTALITY                     Name"])),
-    token["attributes"].append(getAttribute("LABYRINTH                     Name",i["LABYRINTH                     Name"])),
-    token["attributes"].append(getAttribute("CHIP                     Name",i["CHIP                     Name"])),
-    token["attributes"].append(getAttribute("LIGHT                     Name",i["LIGHT                     Name"])),
-    token["attributes"].append(getAttribute("FEATHERS                     Material",i["FEATHERS                     Material"])),
+    token["attributes"].append(getAttribute("HORNS",i["HORNS                     Material"])),
+    token["attributes"].append(getAttribute("MASK",i["MASK                     Material"])),
+    token["attributes"].append(getAttribute("IMMORTALITY",i["IMMORTALITY                     Name"])),
+    token["attributes"].append(getAttribute("LABYRINTH",i["LABYRINTH                     Name"])),
+    token["attributes"].append(getAttribute("CHIP",i["CHIP                     Name"])),
+    token["attributes"].append(getAttribute("LIGHT",i["LIGHT                     Name"])),
+    token["attributes"].append(getAttribute("FEATHERS",i["FEATHERS                     Material"])),
 
 
 
