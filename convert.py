@@ -1,9 +1,18 @@
-import pandas as pd 
-import json
-data = pd.read_csv('mask_generations/Hartebeest.csv') 
-# data.rename(columns={"HORNS                     Material": "Horns",})
+# import pandas as pd 
+# import json
+# data = pd.read_csv('mask_generations/Hartebeest.csv') 
+# data.rename(columns={"HORNS                     Material": "a", "B": "c"})
 
 
+#     token["attributes"].append(getAttribute("HORNS",i["HORNS                     Material"])),
+#     token["attributes"].append(getAttribute("MASK",i["MASK                     Material"])),
+#     token["attributes"].append(getAttribute("IMMORTALITY",i["IMMORTALITY                     Name"])),
+#     token["attributes"].append(getAttribute("LABYRINTH",i["LABYRINTH                     Name"])),
+#     token["attributes"].append(getAttribute("CHIP",i["CHIP                     Name"])),
+#     token["attributes"].append(getAttribute("LIGHT",i["LIGHT                     Name"])),
+# "FEATHERS",i["FEATHERS                     Material"])),
+
+# data.head()
 
 # data = data.drop(['Unnamed: 0'], axis=1) 
 # data = data.drop(['Unnamed: 3'], axis=1) 
@@ -74,11 +83,11 @@ data = pd.read_csv('mask_generations/Hartebeest.csv')
 # data = data.drop(['HORN ROPES: Total Tickets'],axis=1) 
 # data = data.drop(['HORN ROPES Odds (% chance)'],axis=1) 
 
-data1 = data.to_json(r'v1.2.json',orient='records') 
-print(data1) 
+# data1 = data.to_json(r'v1.2.json',orient='records') 
+# print(data1) 
 
-IMAGES_BASE_URI = 'ipfs://' 
-PROJECT_NAME = 'Mask'
+# IMAGES_BASE_URI = 'ipfs://' 
+# PROJECT_NAME = 'Mask'
 
 
 
@@ -100,55 +109,132 @@ PROJECT_NAME = 'Mask'
 #     with open('./metadata/MASK/'+ st(token_id), 'w') as outfile:
 #         json.dump(token,outfile,indent=4)
 
-
-f = open('v1.2.json') 
-data = json.load(f) 
-
-IMAGES_BASE_URI = 'ipfs://.../{ID}'
-PROJECT_NAME = 'Initiate Hartebeast Top Feathers Mask ' 
-
-def getAttribute(key,value):
-    return{
-        "trait_type":key[:17],
-        "value":value[:18]
-    } 
-
-for i in data:
-    token_id =i['                    '][5:]
-    token = {
-        "image":IMAGES_BASE_URI +str(token_id) + '.glb',
-        "tokenId":token_id,
-        "name": PROJECT_NAME +'#'+str(token_id),
-        "attributes": []
-    }
+import pandas as pd 
+import json
+import os
 
 
-    token["attributes"].append(getAttribute("MASK","HARTEBEAST")),
-    token["attributes"].append(getAttribute("CULTURE","Native American")),
+csv = input('input the csv file: ')
 
-    # token["attributes"].append(getAttribute("TEXTURES",i["MASK                     Material"])),
-    token["attributes"].append(getAttribute("HORNS TEXTURE",i["HORNS                     Material"])),
-    token["attributes"].append(getAttribute("MASK TEXTURE",i["MASK                     Material"])),
+if csv == 'hartebeast-top':
+    data = pd.read_csv('Hartebeast-top/mask_generations/{}.csv'.format(csv)) 
+    data1 = data.to_json(r'v1.2.json',orient='records') 
+    print(data1)
+    f = open('hartebeast-top/v1.2.json') 
+    data = json.load(f) 
+
+    IMAGES_BASE_URI = 'ipfs://{}'
+    PROJECT_NAME = 'Initiate Hartebeast Top Feathers Mask ' 
+
+    def getAttribute(key,value):
+        return{
+            "trait_type":key[:17],
+            "value":value[:18]
+        } 
+
+    for i in data:
+        token_id =i['                    '][5:]
+        token = {
+            "image":IMAGES_BASE_URI +str(token_id) + '.glb',
+            "tokenId":token_id,
+            "name": PROJECT_NAME +'#'+str(token_id),
+            "attributes": []
+        }
+        token["attributes"].append(getAttribute("MASK","HARTEBEAST")),
+        token["attributes"].append(getAttribute("CULTURE","Native American")),
+        # token["attributes"].append(getAttribute("TEXTURES",i["MASK                     Material"])),
+        token["attributes"].append(getAttribute("HORNS TEXTURE",i["HORNS                     Material"])),
+        token["attributes"].append(getAttribute("MASK TEXTURE",i["MASK                     Material"])),
+        token["attributes"].append(getAttribute("IMMORTALITY",i["IMMORTALITY                     Name"])),
+        token["attributes"].append(getAttribute("LABYRINTH",i["LABYRINTH                     Name"])),
+        token["attributes"].append(getAttribute("CHIP",i["CHIP                     Name"])),
+        token["attributes"].append(getAttribute("LIGHT",i["LIGHT                     Name"])),
+        token["attributes"].append(getAttribute("FEATHERS",i["FEATHERS                     Material"])),
+        with open('mask_json/Hartebeast-top_' + str(token_id), 'w') as outfile:
+            json.dump(token,outfile,indent=4) 
+    f.close()
 
 
-    
-    token["attributes"].append(getAttribute("IMMORTALITY",i["IMMORTALITY                     Name"])),
-    token["attributes"].append(getAttribute("LABYRINTH",i["LABYRINTH                     Name"])),
+
+if csv == 'hartebeast-plain':
+    data = pd.read_csv('Hartebeast-plain/mask_generations/{}.csv'.format(csv)) 
+    data1 = data.to_json(r'v1.2.json',orient='records') 
+    print(data1)
+    f = open('hartebeast-plain/v1.2.json') 
+    data = json.load(f) 
+
+    IMAGES_BASE_URI = 'ipfs://{}'
+    PROJECT_NAME = 'Initiate Mask ' 
+
+    def getAttribute(key,value):
+        return{
+            "trait_type":key[:17],
+            "value":value[:18]
+        } 
+
+    for i in data:
+        token_id =i['Unnamed: 0'][5:]
+        token = {
+            "image":IMAGES_BASE_URI +str(token_id) + '.glb',
+            "tokenId":token_id,
+            "name": PROJECT_NAME +'#'+str(token_id),
+            "attributes": []
+        }
+
+
+        token["attributes"].append(getAttribute("HORNS                                                      Material",i["HORNS                                                      Material"])),
+        token["attributes"].append(getAttribute("MASK                                                           Material",i["MASK                                                           Material"])),
+        token["attributes"].append(getAttribute("IMMORTALITY                                                    Name",i["IMMORTALITY                                                    Name"])),
+        token["attributes"].append(getAttribute("LABYRINTH                                                      Name",i["LABYRINTH                                                      Name"])),
+        token["attributes"].append(getAttribute("LIGHTS                                                         Name",i["LIGHTS                                                         Name"])),
+        # token["attributes"].append(getAttribute("",i[""])),
+        # token["attributes"].append(getAttribute("",i[""])),
 
 
 
+        with open('mask_json/Hartebeast-Plain_' + str(token_id), 'w') as outfile:
+            json.dump(token,outfile,indent=4) 
+    f.close()
 
 
-    token["attributes"].append(getAttribute("CHIP",i["CHIP                     Name"])),
-    token["attributes"].append(getAttribute("LIGHT",i["LIGHT                     Name"])),
-    token["attributes"].append(getAttribute("FEATHERS",i["FEATHERS                     Material"])),
+if csv == 'kitsune':
+    data = pd.read_csv('kitsune/mask_generations/{}.csv'.format(csv)) 
+    data1 = data.to_json(r'v1.2.json',orient='records') 
+    print(data1)
+    f = open('kitsune/v1.2.json') 
+    data = json.load(f) 
+
+    IMAGES_BASE_URI = 'ipfs://{}'
+    PROJECT_NAME = 'Kitsune Mask ' 
+
+    def getAttribute(key,value):
+        return{
+            "trait_type":key[:17],
+            "value":value[:18]
+        } 
+
+    for i in data:
+        # directory_path = 'mask_json/'
+        token_id =i['Unnamed: 0'][5:] 
+        token = {
+            "image":IMAGES_BASE_URI +str(token_id) + '.glb',
+            "tokenId":token_id ,
+            "name": PROJECT_NAME +'#'+str(token_id),
+            "attributes": []
+        }
+        # token["attributes"].append(getAttribute("HORNS                                                      Material",i["HORNS                                                      Material"])),
+        token["attributes"].append(getAttribute("MASK Material",i["MASK Material"])),
+        token["attributes"].append(getAttribute("IMMORTALITY                                                     Name",i["IMMORTALITY                                                     Name"])),
+        token["attributes"].append(getAttribute("LABYRINTH                                                       Name",i["LABYRINTH                                                       Name"])),
+        token["attributes"].append(getAttribute("LIGHTS                                                          Name",i["LIGHTS                                                          Name"])),
+        # token["attributes"].append(getAttribute("",i[""])),
+        # token["attributes"].append(getAttribute("",i[""])),
+        # token["attributes"].append(getAttribute("",i[""])),
+        with open('mask_json/Kitsune_' + str(token_id), 'w') as outfile:
+            json.dump(token,outfile,indent=4) 
+    f.close()
 
 
-
-
-    with open('mask_json/' + str(token_id), 'w') as outfile:
-        json.dump(token,outfile,indent=4) 
-f.close()
 
 
 
