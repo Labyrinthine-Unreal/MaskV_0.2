@@ -182,12 +182,16 @@ if csv == 'hartebeast-plain':
         }
 
 
-        token["attributes"].append(getAttribute("HORNS                                                      Material",i["HORNS                                                      Material"])),
-        token["attributes"].append(getAttribute("MASK                                                           Material",i["MASK                                                           Material"])),
-        token["attributes"].append(getAttribute("IMMORTALITY                                                    Name",i["IMMORTALITY                                                    Name"])),
-        token["attributes"].append(getAttribute("LABYRINTH                                                      Name",i["LABYRINTH                                                      Name"])),
-        token["attributes"].append(getAttribute("LIGHTS                                                         Name",i["LIGHTS                                                         Name"])),
-        # token["attributes"].append(getAttribute("",i[""])),
+        token["attributes"].append(getAttribute("MASK","HARTEBEAST")),
+        token["attributes"].append(getAttribute("CULTURE","Native American")),
+        # token["attributes"].append(getAttribute("TEXTURES",i["MASK                     Material"])),
+        token["attributes"].append(getAttribute("HORNS TEXTURE",i["HORNS                     Material"])),
+        token["attributes"].append(getAttribute("MASK TEXTURE",i["MASK                     Material"])),
+        token["attributes"].append(getAttribute("IMMORTALITY",i["IMMORTALITY                     Name"])),
+        token["attributes"].append(getAttribute("LABYRINTH",i["LABYRINTH                     Name"])),
+        token["attributes"].append(getAttribute("CHIP",i["CHIP                     Name"])),
+        token["attributes"].append(getAttribute("LIGHT",i["LIGHT                     Name"])),
+#         token["attributes"].append(getAttribute("FEATHERS",i["FEATHERS                     Material"])),        # token["attributes"].append(getAttribute("",i[""])),
         # token["attributes"].append(getAttribute("",i[""])),
 
 
