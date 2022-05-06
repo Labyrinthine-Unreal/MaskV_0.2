@@ -233,6 +233,9 @@ if csv == 'kitsune':
         with open('mask_json/Kitsune_' + str(token_id), 'w') as outfile:
             json.dump(token,outfile,indent=4) 
     f.close()
+    
+else:
+    print('Mask not yet added to collection for metadata, contact ZOMBIE')
 
 
 
