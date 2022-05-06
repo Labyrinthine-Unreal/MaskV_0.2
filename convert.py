@@ -1,6 +1,16 @@
 import pandas as pd 
 import json
 data = pd.read_csv('mask_generations/Hartebeest.csv') 
+# data.rename(columns={"HORNS                     Material": "a", "B": "c"})
+
+
+#     token["attributes"].append(getAttribute("HORNS",i["HORNS                     Material"])),
+#     token["attributes"].append(getAttribute("MASK",i["MASK                     Material"])),
+#     token["attributes"].append(getAttribute("IMMORTALITY",i["IMMORTALITY                     Name"])),
+#     token["attributes"].append(getAttribute("LABYRINTH",i["LABYRINTH                     Name"])),
+#     token["attributes"].append(getAttribute("CHIP",i["CHIP                     Name"])),
+#     token["attributes"].append(getAttribute("LIGHT",i["LIGHT                     Name"])),
+# "FEATHERS",i["FEATHERS                     Material"])),
 
 # data.head()
 
@@ -103,17 +113,17 @@ PROJECT_NAME = 'Mask'
 f = open('v1.2.json') 
 data = json.load(f) 
 
-IMAGES_BASE_URI = 'ipfs://'
-PROJECT_NAME = 'Initiate Mask ' 
+IMAGES_BASE_URI = 'ipfs://.../{ID}'
+PROJECT_NAME = 'Initiate Hartebeast Top Feathers Mask ' 
 
 def getAttribute(key,value):
     return{
         "trait_type":key[:17],
-        "value":value[:15]
+        "value":value[:18]
     } 
 
 for i in data:
-    token_id =i['Unnamed: 0'][5:]
+    token_id =i['                    '][5:]
     token = {
         "image":IMAGES_BASE_URI +str(token_id) + '.glb',
         "tokenId":token_id,
@@ -122,13 +132,26 @@ for i in data:
     }
 
 
-    token["attributes"].append(getAttribute("HORNS                                                      Material",i["HORNS                                                      Material"])),
-    token["attributes"].append(getAttribute("MASK                                                           Material",i["MASK                                                           Material"])),
-    token["attributes"].append(getAttribute("IMMORTALITY                                                    Name",i["IMMORTALITY                                                    Name"])),
-    token["attributes"].append(getAttribute("LABYRINTH                                                      Name",i["LABYRINTH                                                      Name"])),
-    token["attributes"].append(getAttribute("LIGHTS                                                         Name",i["LIGHTS                                                         Name"])),
-    # token["attributes"].append(getAttribute("",i[""])),
-    # token["attributes"].append(getAttribute("",i[""])),
+    token["attributes"].append(getAttribute("MASK","HARTEBEAST")),
+    token["attributes"].append(getAttribute("CULTURE","Native American")),
+
+    # token["attributes"].append(getAttribute("TEXTURES",i["MASK                     Material"])),
+    token["attributes"].append(getAttribute("HORNS TEXTURE",i["HORNS                     Material"])),
+    token["attributes"].append(getAttribute("MASK TEXTURE",i["MASK                     Material"])),
+
+
+    
+    token["attributes"].append(getAttribute("IMMORTALITY",i["IMMORTALITY                     Name"])),
+    token["attributes"].append(getAttribute("LABYRINTH",i["LABYRINTH                     Name"])),
+
+
+
+
+
+    token["attributes"].append(getAttribute("CHIP",i["CHIP                     Name"])),
+    token["attributes"].append(getAttribute("LIGHT",i["LIGHT                     Name"])),
+    token["attributes"].append(getAttribute("FEATHERS",i["FEATHERS                     Material"])),
+
 
 
 
