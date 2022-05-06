@@ -223,10 +223,10 @@ if csv == 'kitsune':
             "attributes": []
         }
         # token["attributes"].append(getAttribute("HORNS                                                      Material",i["HORNS                                                      Material"])),
-        token["attributes"].append(getAttribute("MASK Material",i["MASK Material"])),
-        token["attributes"].append(getAttribute("IMMORTALITY                                                     Name",i["IMMORTALITY                                                     Name"])),
-        token["attributes"].append(getAttribute("LABYRINTH                                                       Name",i["LABYRINTH                                                       Name"])),
-        token["attributes"].append(getAttribute("LIGHTS                                                          Name",i["LIGHTS                                                          Name"])),
+        token["attributes"].append(getAttribute("Mask Material",i["MASK Material"])),
+        token["attributes"].append(getAttribute("IMMORTALITY",i["IMMORTALITY                                                     Name"])),
+        token["attributes"].append(getAttribute("LABYRINTH",i["LABYRINTH                                                       Name"])),
+        token["attributes"].append(getAttribute("LIGHTS",i["LIGHTS                                                          Name"])),
         # token["attributes"].append(getAttribute("",i[""])),
         # token["attributes"].append(getAttribute("",i[""])),
         # token["attributes"].append(getAttribute("",i[""])),
