@@ -1,18 +1,9 @@
 import pandas as pd 
 import json
 data = pd.read_csv('mask_generations/Hartebeest.csv') 
-# data.rename(columns={"HORNS                     Material": "a", "B": "c"})
+# data.rename(columns={"HORNS                     Material": "Horns",})
 
 
-#     token["attributes"].append(getAttribute("HORNS",i["HORNS                     Material"])),
-#     token["attributes"].append(getAttribute("MASK",i["MASK                     Material"])),
-#     token["attributes"].append(getAttribute("IMMORTALITY",i["IMMORTALITY                     Name"])),
-#     token["attributes"].append(getAttribute("LABYRINTH",i["LABYRINTH                     Name"])),
-#     token["attributes"].append(getAttribute("CHIP",i["CHIP                     Name"])),
-#     token["attributes"].append(getAttribute("LIGHT",i["LIGHT                     Name"])),
-# "FEATHERS",i["FEATHERS                     Material"])),
-
-# data.head()
 
 # data = data.drop(['Unnamed: 0'], axis=1) 
 # data = data.drop(['Unnamed: 3'], axis=1) 
